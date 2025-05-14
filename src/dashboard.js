@@ -62,6 +62,9 @@ const Dashboard = () => {
     }
   };
 
+  // Calculate total investment
+  const totalInvestment = investments.reduce((acc, inv) => acc + inv.quantity * inv.price, 0);
+
   return (
     <div className="dashboard-container">
       <h2>Investment Dashboard</h2>
@@ -107,6 +110,9 @@ const Dashboard = () => {
           </li>
         ))}
       </ul>
+
+      {/* Display total investment */}
+      <h3>Total Investment: ₹{totalInvestment}</h3>
     </div>
   );
 };

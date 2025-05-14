@@ -10,6 +10,8 @@ import {
   FaSignOutAlt
 } from "react-icons/fa";
 import "./navbar.css";
+import { FaChartLine } from "react-icons/fa";
+
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -32,7 +34,7 @@ const Navbar = () => {
           <>
             <li><Link to="/dashboard"><FaTachometerAlt /> Dashboard</Link></li>
             <li><Link to="/profile"><FaUser /> Profile</Link></li>
-            <li><Link to="/stock">Stock</Link></li>
+<li><Link to="/stock"><FaChartLine /> Stock</Link></li>
             {/* <li><Link to="/FavouriteStock">fav stock </Link></li>
             <li><Link to="/AddFavorite">Saved</Link></li> */}
             <li><button onClick={handleLogout} className="logout-btn"><FaSignOutAlt /> Logout</button></li>
